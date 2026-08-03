@@ -1,0 +1,98 @@
+{
+  "entities": {
+    "User": {
+      "collectionName": "users",
+      "fields": {
+        "uid": {
+          "type": "string",
+          "description": "User Google or Auth UID"
+        },
+        "nome": {
+          "type": "string",
+          "description": "Display name"
+        },
+        "email": {
+          "type": "string",
+          "description": "User email address"
+        },
+        "telefone": {
+          "type": "string",
+          "description": "User phone number"
+        },
+        "cidade": {
+          "type": "string",
+          "description": "Current city"
+        },
+        "bairro": {
+          "type": "string",
+          "description": "Current neighborhood"
+        },
+        "latitude": {
+          "type": "number"
+        },
+        "longitude": {
+          "type": "number"
+        },
+        "avatarUrl": {
+          "type": "string"
+        },
+        "updatedAt": {
+          "type": "string"
+        }
+      }
+    },
+    "RegistroPreco": {
+      "collectionName": "registros",
+      "fields": {
+        "id": {
+          "type": "string"
+        },
+        "usuarioId": {
+          "type": "string"
+        },
+        "produtoId": {
+          "type": "string"
+        },
+        "nomeProduto": {
+          "type": "string"
+        },
+        "categoria": {
+          "type": "string"
+        },
+        "estabelecimentoId": {
+          "type": "string"
+        },
+        "nomeEstabelecimento": {
+          "type": "string"
+        },
+        "cnpjEstabelecimento": {
+          "type": "string"
+        },
+        "preco": {
+          "type": "number"
+        },
+        "quantidade": {
+          "type": "number"
+        },
+        "unidadeMedida": {
+          "type": "string"
+        },
+        "precoMedioNaData": {
+          "type": "number"
+        },
+        "data": {
+          "type": "string"
+        },
+        "latitude": {
+          "type": "number"
+        },
+        "longitude": {
+          "type": "number"
+        },
+        "origem": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

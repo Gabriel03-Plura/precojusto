@@ -1,0 +1,36 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    // Users collection
+    match /users/{userId} {
+      allow read, create, update, delete: if true;
+    }
+
+    // Price records collection (crowdsourced)
+    match /registros/{registroId} {
+      allow read, create, update, delete: if true;
+    }
+
+    // Products catalog collection
+    match /produtos/{produtoId} {
+      allow read: if true;
+      allow create, update, delete: if true;
+    }
+
+    // Stores catalog collection
+    match /estabelecimentos/{estabelecimentoId} {
+      allow read: if true;
+      allow create, update, delete: if true;
+    }
+  }
+}

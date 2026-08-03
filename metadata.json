@@ -1,0 +1,11 @@
+{
+  "name": "PreçoJusto",
+  "description": "Comparador de preços regionais de supermercados e farmácias via leitura de QR Code de NFC-e.",
+  "requestFramePermissions": [
+    "camera",
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
